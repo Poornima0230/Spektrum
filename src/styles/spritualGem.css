@@ -1,0 +1,51 @@
+.spiritual {
+    background: var(--primary2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100svh;
+}
+
+.spiritual-grid {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.spiritual-card {
+    width: 30rem;
+    padding: 1.2rem;
+    background: var(--white);
+    border: 0.2px solid rgb(32, 32, 32, 0.3);
+    border-bottom: 2px solid var(--button1);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.spiritual-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-size: 200;
+    padding: 1rem;
+    font-family: "Playfair display", serif;
+}
+
+.spiritual-card ul {
+    padding: 1rem;
+    line-height: 2;
+
+    & li {
+        list-style-type: "— ";
+        line-height: 2;
+        font-size: 1.2rem;
+    }
+}

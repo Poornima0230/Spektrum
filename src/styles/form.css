@@ -1,0 +1,225 @@
+.order {
+    background: var(--accent6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4rem 0;
+}
+
+/* container */
+.order-container {
+    width: 90%;
+    max-width: 500px;
+    /* margin: 50px auto; */
+    padding: 30px;
+    background: #0f0f0f;
+    border-radius: 0 0 8px 8px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-top: 2.5px solid var(--button1);
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    -ms-border-radius: 0 0 8px 8px;
+    -o-border-radius: 0 0 8px 8px;
+}
+
+.order-container h1 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: var(--button1);
+    letter-spacing: 0.5rem;
+    font-family: "Playfair display", serif;
+}
+
+.order-container h2 {
+    /* margin-bottom: 25px; */
+    font-size: 3rem;
+    padding: 1.2rem 0;
+    font-weight: 400;
+    color: #ccc;
+    text-align: left;
+    font-family: "Playfair display", serif;
+
+    & span {
+        color: var(--button1);
+    }
+}
+
+.order-container p {
+    font-size: 1.3rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+/* form layout */
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* group */
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+/* inputs + textarea */
+.form-input {
+    width: 100%;
+    padding: 12px 10px;
+    background: transparent;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* textarea specific */
+textarea.form-input {
+    min-height: 80px;
+    resize: none;
+}
+
+/* focus effect */
+.form-input:focus {
+    border-color: gold;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* floating label */
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: #0f0f0f;
+    padding: 0 5px;
+    color: #aaa;
+    font-size: 13px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* move label up */
+.form-input:focus+label,
+.form-input:not(:placeholder-shown)+label {
+    top: -8px;
+    font-size: 11px;
+    color: gold;
+}
+
+/* date input fix */
+input[type="date"].form-input {
+    color: #ccc;
+}
+
+input[type="date"].form-input:focus {
+    color: white;
+}
+
+/* file upload */
+.upload-file {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 1px dashed #555;
+    border-radius: 6px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* file name text */
+.file-name {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+input[type="file"]::file-selector-button {
+    background: gold;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #ffcc00;
+}
+
+/* submit button */
+.order-form button {
+    padding: 12px;
+    background: linear-gradient(135deg, gold, #ffcc00);
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* order successfully placed */
+.success-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #111;
+    border-left: 4px solid gold;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    animation: slideIn 0.4s ease;
+    z-index: 1000;
+}
+
+.success-toast p {
+    margin: 0;
+    font-weight: bold;
+    color: gold;
+}
+
+.success-toast span {
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* responsive */
+@media (max-width: 990px) {
+    .order-container {
+        padding: 20px;
+    }
+
+    /* .order-container h1 {
+        font-size: 22px;
+    }
+
+    .order-container h2 {
+        font-size: 16px;
+    } */
+}

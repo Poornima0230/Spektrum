@@ -1,0 +1,71 @@
+.bullion {
+    background: var(--accent7);
+    /* background-repeat: no-repeat; */
+
+    height: 100vh;
+    height: 100svh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+
+.bullion-grid {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.bullion-card {
+    width: 18rem;
+    /*height: 18rem;
+    */
+    /*line-height: 2;
+    */
+    transition: all 0.2s ease-in-out;
+    background: var(--primary2);
+    padding: 1rem;
+    border: 0.05px solid var(--button2);
+    letter-spacing: 1px;
+    text-align: center;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.bullion-symbol {
+    font-size: 4rem;
+    padding: 2rem;
+    color: var(--button1);
+    font-family: "Playfair display", serif;
+}
+
+.bullion-title {
+    font-size: 1.4rem;
+    padding-bottom: 1.2rem;
+}
+
+.bullion-desc {
+    padding-bottom: 1.5rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.bullion-card:hover {
+    border: 1px solid var(--button1);
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}

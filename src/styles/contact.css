@@ -1,0 +1,110 @@
+.contact {
+    background: var(--primary2);
+    height: 100vh;
+    height: 100svh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.contact-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+}
+
+.owner {
+    width: 30rem;
+    border: 2px solid var(--button1);
+    height: 30rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.section-sub-tag {
+    text-transform: capitalize;
+    color: var(--text3);
+    padding: 2rem;
+    font-size: 1.4rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+.contact-grid {
+    border: 1px solid var(--button2);
+    box-shadow: 0 0 15px var(--button2);
+    padding: 2rem;
+    /* width: 50%; */
+    letter-spacing: 1px;
+    border-radius: 4px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.contact-name {
+    font-size: 4rem;
+    font-family: "Playfair display", serif;
+    color: var(--button1);
+}
+
+.contact-tag {
+    font-size: 1.8rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--button1);
+}
+
+.contact-info {
+    padding: 1.2rem 0;
+    line-height: 2;
+    padding-top: 3rem;
+
+    & p {
+        /* width: 80%; */
+        font-size: 1.8rem;
+        padding-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & span,
+        & span a {
+            justify-self: flex-start;
+            font-weight: 600;
+        }
+
+        & span a {
+            color: var(--primary1);
+        }
+
+        & span a:hover {
+            color: var(--button1);
+        }
+    }
+}
+
+@media(max-width:990px) {
+    .contact-grid {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-info {
+        width: 100%;
+
+        & p {
+            width: 100%;
+        }
+    }
+}

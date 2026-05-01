@@ -1,0 +1,196 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 7rem;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--accent4);
+    border-bottom: 1px solid var(--button2);
+
+    transition: background 0.3s ease;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background:var() */
+    width: 100%;
+    padding: 2rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5rem;
+
+    /* font */
+
+    padding: 2rem;
+
+    & li {
+        font-size: 1.6rem;
+    }
+
+    & a {
+        color: var(--primary2);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        -webkit-transition: color 0.3s ease;
+        -moz-transition: color 0.3s ease;
+        -ms-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+
+        &:hover {
+            background: var(--accent5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+
+}
+
+.menu-icon {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+
+    & img {
+        width: 4rem;
+        border-radius: 10%;
+        -webkit-border-radius: 10%;
+        -moz-border-radius: 10%;
+        -ms-border-radius: 10%;
+        -o-border-radius: 10%;
+    }
+
+}
+
+.hero-title {
+    /* margin-left: -2rem; */
+    /* font */
+    color: var(--button1);
+    font-family: "Playfair display", serif;
+    /* font-size: 1.5rem; */
+    /* color: var(--primary2); */
+    /* text-shadow: 1px 1px 8px var(--button2); */
+    padding: 2rem;
+    letter-spacing: 1px;
+}
+
+@media(max-width:990px) {
+    nav ul li a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    header {
+        /* background: transparent; */
+        padding: 1.2rem 0;
+        width: 100%;
+        position: relative;
+    }
+
+    .header {
+        /* border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1); */
+        padding: 1.2rem;
+        padding-top: 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+    .menu-web {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2.3rem;
+        font-size: 4rem;
+        padding-right: 1.2rem;
+        color: var(--button1);
+    }
+
+    .menu-mobile {
+        position: fixed;
+        top: 7rem;
+        width: 100%;
+
+        right: 0rem;
+        /* height: 100vh; */
+        background: var(--accent4);
+        opacity: 1;
+        transition: all 1s linear 1s;
+        z-index: 1000;
+        -webkit-transition: all 1s linear 1s;
+        -moz-transition: all 1s linear 1s;
+        -ms-transition: all 1s linear 1s;
+        -o-transition: all 1s linear 1s;
+
+        & ul {
+            display: flex;
+            /* border: 2px solid red; */
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding: 1.2rem;
+            gap: 0;
+            /* border: 2px solid pink; */
+        }
+    }
+
+    .menu-mobile ul li {
+        padding: 0rem;
+        width: 100%;
+        color: var(--button2);
+        border-bottom: 1px solid var(--button2);
+        text-align: center;
+    }
+
+    .menu-mobile ul li:hover {
+        color: var(--text2)
+    }
+
+    .menu-mobile ul li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-mobile ul li a {
+        color: var(--button1);
+        font-size: 2.6rem;
+        text-align: center;
+        padding: 1.6rem;
+        font-weight: 400;
+    }
+}
