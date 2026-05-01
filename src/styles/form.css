@@ -107,7 +107,8 @@ textarea.form-input {
 
 /* move label up */
 .form-input:focus+label,
-.form-input:not(:placeholder-shown)+label {
+.form-input:not(:placeholder-shown)+label,
+.form-input:valid+label {
     top: -8px;
     font-size: 11px;
     color: gold;

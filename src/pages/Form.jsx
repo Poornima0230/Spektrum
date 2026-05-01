@@ -152,6 +152,7 @@ export const OrderForm = () => {
               className="form-input"
             />
             {/* <label htmlFor="date"></label> */}
+            <label htmlFor="date">Select Date</label>
           </div>
           <div className="form-group">
             <textarea
