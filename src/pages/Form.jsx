@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "../styles/form.css";
+import emailjs from "emailjs-com";
 
 export const OrderForm = () => {
   const [formData, setFormData] = useState({
@@ -25,29 +26,66 @@ export const OrderForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // alert("Order Submitted successfully");
-    setShowMessage(true);
+    try {
+      let base64File = "";
 
-    // auto hide after 3sec
-    setTimeout(() => {
-      setShowMessage(false);
-    }, 3000);
+      if (formData.file) {
+        base64File = await convertToBase64(formData.file);
+      }
 
-    // reset
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      date: "",
-      category: "",
-      details: "",
-      file: null,
-    });
+      const templateParams = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        date: formData.date,
+        category: formData.category,
+        details: formData.details,
+        file: base64File,
+      };
 
-    fileRef.current.value = "";
+      await emailjs.send(
+        "service_0myif4z",
+        "template_vv63wrr",
+        templateParams,
+        "EnmX8nJY0G2uCzdS3"
+      );
+
+      // ✅ show success only after sending
+      setShowMessage(true);
+
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 3000);
+
+      // ✅ reset form AFTER success
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        date: "",
+        category: "",
+        details: "",
+        file: null,
+      });
+
+      fileRef.current.value = "";
+    } catch (error) {
+      console.log(error);
+      alert("Something went wrong. Try again.");
+    }
   };
 
   return (

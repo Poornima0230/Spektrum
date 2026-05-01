@@ -4,9 +4,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
-    height: 100svh;
-    min-height: 100svh;
+    /* height: 100vh; */
+    /* height: 100svh; */
+    /* min-height: 100svh; */
 }
 
 .why-grid {
@@ -60,14 +60,20 @@
     font-size: 1.3rem;
 }
 
+@media(min-width:990px) {
+    .why {
+        height: 100svh;
+    }
+}
+
 @media(max-width:990px) {
     .why-card {
         width: 50%;
     }
 
-    /* .why {
+    .why {
         padding: 5rem 0;
-    } */
+    }
 
     .why-grid {
         padding: 0;

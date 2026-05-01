@@ -1,8 +1,8 @@
 .contact {
     background: var(--primary2);
-    height: 100vh;
-    height: 100svh;
-    min-height: 100svh;
+    /* height: 100vh; */
+    /* height: 100svh; */
+    /* min-height: 100svh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,6 +107,11 @@
         & p {
             width: 100%;
         }
+    }
+
+    .contact-full {
+        /* gap: 1px; */
+        /* pad0 */
     }
 
 
