@@ -2,11 +2,8 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  /*background-color: var(--accent2);
-  */
   background: var(--accent5);
   color: var(--accent7);
-  /* border: 0.2px solid var(--accent3); */
   border: none;
   padding: 12px 15px;
   font-size: 18px;
@@ -26,7 +23,6 @@
 
 
   &:hover {
-    /* background-color: var(--accent3); */
     color: var(--accent7);
   }
 }

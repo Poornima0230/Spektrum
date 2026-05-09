@@ -1,4 +1,4 @@
-import { Hero } from "../components/Hero";
+import { Hero } from "../components/ui/Hero";
 import "../styles/home.css";
 import { About } from "./About";
 import { Bullion } from "./Bullion";

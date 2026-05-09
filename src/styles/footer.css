@@ -1,5 +1,4 @@
 .footer {
-    /* margin-top: 3rem; */
     background: var(--accent4);
     border-top: 1px solid var(--button1);
     display: flex;
@@ -13,10 +12,6 @@
 .footer-title {
     text-transform: uppercase;
     color: var(--primary2);
-    /* background: var(--accent7);
-    font-weight: 500;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     letter-spacing: 1.2px;
     font-family: "Playfair display", serif;
     font-size: 3rem;

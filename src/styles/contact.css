@@ -1,8 +1,5 @@
 .contact {
     background: var(--primary2);
-    /* height: 100vh; */
-    /* height: 100svh; */
-    /* min-height: 100svh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +40,6 @@
     border: 1px solid var(--button2);
     box-shadow: 0 0 15px var(--button2);
     padding: 2rem;
-    /* width: 50%; */
     letter-spacing: 1px;
     border-radius: 4px;
 
@@ -71,7 +67,6 @@
     padding-top: 3rem;
 
     & p {
-        /* width: 80%; */
         font-size: 1.8rem;
         padding-bottom: 1.5rem;
         display: flex;
@@ -108,11 +103,4 @@
             width: 100%;
         }
     }
-
-    .contact-full {
-        /* gap: 1px; */
-        /* pad0 */
-    }
-
-
 }

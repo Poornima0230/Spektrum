@@ -4,14 +4,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* height: 100vh; */
-    /* height: 100svh; */
-    /* min-height: 100svh; */
 }
 
 .why-grid {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
@@ -32,9 +28,6 @@
 .why-icon {
     height: 4rem;
     width: 4rem;
-
-    /*background-color: pink;
-    */
     display: flex;
     align-items: center;
     justify-content: center;

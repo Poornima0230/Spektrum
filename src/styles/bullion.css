@@ -1,10 +1,5 @@
 .bullion {
     background: var(--accent7);
-    /* background-repeat: no-repeat; */
-
-    /* height: 100vh;
-    height: 100svh;
-    min-height: 100svh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +15,6 @@
 
 .bullion-grid {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
@@ -28,10 +22,6 @@
 
 .bullion-card {
     width: 18rem;
-    /*height: 18rem;
-    */
-    /*line-height: 2;
-    */
     transition: all 0.2s ease-in-out;
     background: var(--primary2);
     padding: 1rem;

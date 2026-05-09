@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "img": "precious",
+        "title": "Precious Gemstones",
+        "description": "Certified natural precious stones including Diamonds, Rubies, Sapphires (Blue, Yellow, White, Pink, Green), Emeralds, and more — available with treatment details (untreated, heat, GF, dyed).",
+        "gems": [
+            "Diamond",
+            "Ruby",
+            "Sapphire",
+            "Emerald"
+        ]
+    },
+    {
+        "id": 2,
+        "img": "semiPre",
+        "title": "Semi-Precious Gemstones",
+        "description": " A wide range of semi-precious stones — Amethyst, Citrine, Topaz, Aquamarine, Moonstone, Opal, Zircon, Spinel, Tourmaline, Tanzanite, Iolite, Lapis Lazuli, Jade, Agate, Carnelian, Onyx, and 20+ more.",
+        "gems": [
+            "Amethyst",
+            "Topaz",
+            "Opal",
+            "Turquoise"
+        ]
+    },
+    {
+        "id": 3,
+        "img": "diamond",
+        "title": "Loose Diamonds",
+        "description": "Graded loose diamonds available in white, yellow, and blue varieties. Classified by quality grades (AAA Premium, AA Fine, A Commercial, B Lower Grade), shapes, and carat weights.",
+        "gems": [
+            "White Diamond",
+            "Yellow Diamond",
+            "Blue Diamond"
+        ]
+    },
+    {
+        "id": 4,
+        "img": "diamondJewel",
+        "title": "Diamond Jewellery",
+        "description": "Handcrafted diamond jewellery set in gold and platinum. Custom designs available in all gem shapes — Round, Oval, Pear, Cushion, Princess, Emerald Cut, Heart, Marquise, and Cabochon.",
+        "gems": [
+            "Gold Setting",
+            "Platinum Setting",
+            "Custom Design"
+        ]
+    },
+    {
+        "id": 5,
+        "img": "GoldJewel",
+        "title": "Gold Jewellery",
+        "description": "Exquisite gold jewellery collections crafted in-house. Covers traditional and contemporary designs for all occasions, backed by 30 years of manufacturing expertise since 2005.",
+        "gems": [
+            "Traditional",
+            "Contemporary",
+            "Custom Orders"
+        ]
+    },
+    {
+        "id": 6,
+        "img": "silverJew",
+        "title": "Silver Jewellery",
+        "description": "Sterling silver jewellery featuring a curated range of designs. Ideal for everyday wear and gifting, with options for gemstone-studded and plain silver pieces.",
+        "gems": [
+            "Sterling Silver",
+            "Gemstone Set",
+            "Plain Silver"
+        ]
+    },
+    {
+        "id": 7,
+        "img": "GemTesting",
+        "title": "Gem Testing Lab Services",
+        "description": "Professional gemstone certification and testing. Identifies stone type, origin, treatments (heat, GF, dye, untreated), and quality grading. Trusted certification backed by decades of lab expertise.",
+        "gems": [
+            "Certification",
+            "Origin Testing",
+            "Treatment ID",
+            "Grading"
+        ]
+    },
+    {
+        "id": 8,
+        "img": "Astrology",
+        "title": "Astrology Services",
+        "description": "Personalized gemstone guidance based on astrological charts. Recommends the right stones for planetary benefits, with expert consultation on wearing methods and authentic sourcing.",
+        "gems": [
+            "Gem Guidance",
+            "Horoscope Reading",
+            "Consultation"
+        ]
+    }
+]

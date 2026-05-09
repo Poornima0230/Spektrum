@@ -8,10 +8,108 @@ export const OrderForm = () => {
     phone: "",
     email: "",
     date: "",
+
     category: "",
-    details: "",
+    stone: "",
+    shape: "",
+    quality: "",
+    weight: "",
+
+    notes: "",
     file: null,
   });
+  const categories = [
+    "Precious Gemstone",
+    "Semi-Precious Gemstone",
+    "Loose Diamond",
+    "Diamond Jewellery",
+    "Gold Jewellery",
+    "Silver Jewellery",
+  ];
+
+  const stones = ["Diamond", "Ruby", "Sapphire", "Emerald"];
+
+  const shapes = [
+    {
+      name: "Round",
+      code: "RD",
+    },
+    {
+      name: "Oval",
+      code: "OV",
+    },
+    {
+      name: "Pear",
+      code: "PR",
+    },
+    {
+      name: "Cushion",
+      code: "CU",
+    },
+    {
+      name: "Princess",
+      code: "PS",
+    },
+    {
+      name: "Emerald Cut",
+      code: "EC",
+    },
+    {
+      name: "Heart",
+      code: "HT",
+    },
+    {
+      name: "Marquise",
+      code: "MQ",
+    },
+    {
+      name: "Cabochon",
+      code: "CAB",
+    },
+  ];
+
+  const qualities = [
+    {
+      code: "AAA",
+      label: "Premium",
+    },
+    {
+      code: "AA",
+      label: "Fine",
+    },
+    {
+      code: "A",
+      label: "Commerical",
+    },
+    {
+      code: "B",
+      label: "Lower Grade",
+    },
+  ];
+
+  const weights = [
+    {
+      label: "0.50 ct",
+      code: "050",
+    },
+    {
+      label: "1.00 ct",
+      code: "100",
+    },
+    {
+      label: "2.00 ct",
+      code: "200",
+    },
+    {
+      label: "5.00 ct",
+      code: "500",
+    },
+    {
+      label: "10.00 ct",
+      code: "1000",
+    },
+  ];
+
   const [showMessage, setShowMessage] = useState(false);
 
   const fileRef = useRef();
@@ -51,8 +149,14 @@ export const OrderForm = () => {
         phone: formData.phone,
         email: formData.email,
         date: formData.date,
+
         category: formData.category,
-        details: formData.details,
+        stone: formData.stone,
+        shape: formData.shape,
+        quality: formData.quality,
+        weight: formData.weight,
+
+        notes: formData.notes,
         file: base64File,
       };
 
@@ -63,14 +167,14 @@ export const OrderForm = () => {
         "EnmX8nJY0G2uCzdS3"
       );
 
-      // ✅ show success only after sending
+      // show success only after sending
       setShowMessage(true);
 
       setTimeout(() => {
         setShowMessage(false);
       }, 3000);
 
-      // ✅ reset form AFTER success
+      //  reset form AFTER success
       setFormData({
         name: "",
         phone: "",
@@ -151,32 +255,93 @@ export const OrderForm = () => {
               required
               className="form-input"
             />
-            {/* <label htmlFor="date"></label> */}
             <label htmlFor="date">Select Date</label>
           </div>
+
           <div className="form-group">
-            <textarea
+            <select
               name="category"
-              id="category"
-              placeholder=" "
               value={formData.category}
               onChange={handleChange}
               required
-              className="form-input"
-            ></textarea>
-            <label htmlFor="category">Item Category</label>
+            >
+              <option value="">Select Category</option>
+              {categories.map((curr, index) => (
+                <option key={index}>{curr}</option>
+              ))}
+            </select>
           </div>
+
+          <div className="form-group">
+            <select
+              name="stone"
+              value={formData.stone}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Stone</option>
+              {stones.map((stone, index) => {
+                return <option key={index}>{stone}</option>;
+              })}
+            </select>
+          </div>
+
+          <div className="form-group">
+            <select name="shape" value={formData.shape} onChange={handleChange}>
+              <option value="">Select Shape</option>
+              {shapes.map((shape, index) => {
+                return (
+                  <option key={index}>
+                    {shape.name} ({shape.code})
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+
+          <div className="form-group">
+            <select
+              name="quality"
+              value={formData.quality}
+              onChange={handleChange}
+            >
+              <option value="">Select Quality</option>
+              {qualities.map((curr, index) => {
+                return (
+                  <option key={index}>
+                    {curr.name} ({curr.code})
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+
+          <div className="form-group">
+            <select
+              name="weight"
+              value={formData.weight}
+              onChange={handleChange}
+            >
+              <option value="">Select Weight</option>
+              {weights.map((weight, index) => (
+                <option key={index}>
+                  {weight.label} ({weight.code})
+                </option>
+              ))}
+            </select>
+          </div>
+
           <div className="form-group ">
             <textarea
-              name="details"
-              id="orderDetails"
+              name="notes"
+              id="notes"
               placeholder=" "
-              value={formData.details}
+              value={formData.notes}
               onChange={handleChange}
               required
               className="form-input"
             ></textarea>
-            <label htmlFor="orderDetails">Order Details</label>
+            <label htmlFor="notes">Additional instructions (optional)</label>
           </div>
 
           <div className="form-group ">
@@ -199,6 +364,54 @@ export const OrderForm = () => {
             </div>
           )}
         </form>
+
+        {/* summary */}
+        <div className="summary-card">
+          <h3>Order Summary</h3>
+
+          <div className="summary-item">
+            <span>Category: </span>
+            <p>{formData.category || "-"}</p>
+          </div>
+
+          <div className="summary-item">
+            <span>Stone: </span>
+            <p>{formData.stone || "-"}</p>
+          </div>
+
+          <div className="summary-item">
+            <span>Shape: </span>
+            <p>{formData.shape || "-"}</p>
+          </div>
+
+          <div className="summary-item">
+            <span>Quality: </span>
+            <p>{formData.quality || "-"}</p>
+          </div>
+
+          <div className="summary-item">
+            <span>Weight: </span>
+            <p>{formData.weight || "-"}</p>
+          </div>
+
+          <div className="summary-item">
+            <span>Date:</span>
+            <p>{formData.date || "—"}</p>
+          </div>
+
+          <div className="summary-item">
+            <span>Notes:</span>
+            <p>{formData.notes || "—"}</p>
+          </div>
+
+          <div className="summary-highlight">
+            <p>
+              {formData.stone && formData.shape && formData.quality
+                ? `${formData.stone} | ${formData.shape} | ${formData.quality} | ${formData.weight}`
+                : "Select details to preview order"}
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

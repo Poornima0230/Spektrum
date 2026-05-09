@@ -40,12 +40,7 @@ export const Contact = () => {
             </p>
           </div>
         </div>
-        <img
-          src={owner}
-          alt="owner logo"
-          className="owner"
-          // data-aos="fade-up"
-        />
+        <img src={owner} alt="owner logo" className="owner" />
       </div>
     </section>
   );

@@ -1,24 +1,7 @@
 import "../styles/about.css";
+import certifications from "../data/aboutCertificationns.json";
 
 export const About = () => {
-  const certifications = [
-    {
-      title: "IGI — International Gemological Institute",
-      desc: "Certified lab and grading authority for diamonds and coloured gemstones worldwide.",
-    },
-    {
-      title: "GIA — Gemological Institute of America",
-      desc: "The world's foremost authority in gemology — Diploma Diamond Grader.",
-    },
-    {
-      title: "IDI — Indian Diamond Institute, Surat",
-      desc: "India's premier diamond trade certification body.",
-    },
-    {
-      title: "SGL — Spektrum Gem Lab",
-      desc: "Our in-house certified testing lab maintaining international grading standards since 1998.",
-    },
-  ];
   return (
     <section className="about" id="about">
       <div className="section-header" data-aos="zoom-in">
@@ -48,8 +31,7 @@ export const About = () => {
         <div className="about-certs">
           {certifications.map((item, index) => (
             <div className="cert-card" key={index}>
-              <div className="cert-title">{item.title}</div>
-              <div className="cert-desc">{item.desc}</div>
+              <div className="cert-title">{item.content}</div>
             </div>
           ))}
         </div>

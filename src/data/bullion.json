@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "symbol": "Au",
+        "title": "Gold Purchasing & Sales",
+        "desc": "Buy and sell gold bullion at competitive market rates."
+    },
+    {
+        "id": 2,
+        "symbol": "Ag",
+        "title": "Silver Purchasing & Sales",
+        "desc": "Silver bullion trading — wholesale and retail with accurate assaying."
+    },
+    {
+        "id": 3,
+        "symbol": "Pt",
+        "title": "Platinum Services",
+        "desc": "Platinum purchasing and sales with certified purity verification."
+    },
+    {
+        "id": 4,
+        "symbol": "☉",
+        "title": "Melting & Testing",
+        "desc": "Old gold and silver melting, purity testing, and valuation."
+    },
+    {
+        "id": 5,
+        "symbol": "§",
+        "title": "Gold & Silver Schemes",
+        "desc": "Savings and investment schemes — secure and government-compliant."
+    }
+]
